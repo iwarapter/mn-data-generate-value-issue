@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: mn.data.generate.value.issue
+---
+testFramework: junit
+sourceLanguage: java

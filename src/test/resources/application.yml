@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: mn-data-generate-value-issue
+
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - 'mn.data.generate.value.issue.domain'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: false
+
+datasources:
+  default:
+    url: jdbc:tc:postgresql://localhost/dir?TC_INITSCRIPT=file:src/test/resources/import.sql
+    username: test
+    password: test
+    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
